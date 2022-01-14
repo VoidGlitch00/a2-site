@@ -51,6 +51,9 @@ header {
   font-size: 52px;
   margin-bottom: 16px;
 }
+.header-para{
+  margin: 0;
+}
 .influencer-intro{
   margin-right: 200px;
 }
@@ -61,7 +64,7 @@ header {
   border-radius: 40px;
   color: white;
   font-size: 16px;
-  background-color: darkslategray;
+  background-color: rgb(189, 102, 230);
 }
 .fa-arrow-right{
   margin-left: 10px;
@@ -70,4 +73,88 @@ header {
 .main-cam{
   width: 40%;
   margin-top: -70px;
+}
+
+/*------------------------
+         companies 
+-------------------------*/
+.companies{
+  display: flex;
+  margin-top: 140px;
+  justify-content: center;
+}
+.company{
+  width: 84px;
+  height: 26px;
+  margin-right: 60px;
+}
+.upper{
+  border: 1px solid lightgray;
+  position: relative;
+  top: 110px;
+  background-color: lightgray;
+}
+.lower{
+  border: 1px solid lightgray;
+  position: relative;
+  top: 25px;
+  background-color:lightgray;
+  margin-bottom: 100px;
+}
+/*----------------------------
+      Popular Collection
+-----------------------------*/
+.popular-tag{
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.pop-collection{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin-left: 30px;
+
+}
+.collection{
+  border-radius: 5px;
+  box-shadow: 2px 2px 45px lightgray, -2px -2px 45px lightgray;
+}
+.collection img{
+  width: 300px;
+  height: 256px;
+  margin: 30px;
+}
+.collection h3,h5,p{
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+.collection h3{
+  font-size: 28px;
+}
+.collection h5{
+  font-size: 24px;
+}
+.collection p{
+  font-size: 14px;
+  color: gray;
+}
+.fa-star{
+  color: orange;
+}
+.fa-star-half-alt{
+  color: orange;
+  margin-right: 8px;
+}
+#see-more{
+  text-decoration: none;
+  display:flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 30px;
+  color: rgb(189, 102, 230);
+}
+.ar{
+  color: rgb(189, 102, 230);
 }
