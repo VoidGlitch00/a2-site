@@ -214,3 +214,50 @@ footer h2{
 .fa-instagram{
   padding-right: 10px;
 }
+
+
+
+.influencer{
+  font-size: 52px;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+}
+.influncer::before{
+  content: 'Influencer';
+  position: absolute;
+  color: rgb(8, 248, 0);
+  animation: typing 2s ease-in-out infinite;
+}
+@keyframes typing {
+  0%{
+    content: 'I|';
+  }
+  10%{
+    content: "In|";
+  }
+  19%{
+    content: "Inf|";
+  }
+  29%{
+    content: "Infl|";
+  }
+  38%{
+    content: "Influ|";
+  }
+  48%{
+    content: "Influe|";
+  }
+  59%{
+    content: "Influen|";
+  }
+  69%{
+    content: "Influenc|";
+  }
+  85%{
+    content: "Influence|";
+  }
+  100%{
+    content: "Influencer|";
+  } 
+}
