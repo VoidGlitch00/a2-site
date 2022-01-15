@@ -5,19 +5,18 @@
   padding: 0;
 }
 body{
-  position: absolute;
-  width: 80%;
-  height: 80%; 
-  left: 10%;
   font-family: 'PT Serif', serif;
 }
 /*------------------------------
             header part 
 --------------------------------*/
-
+.bar{
+  display: none;
+}
 header {
   display: flex;
   margin-top: 85px;
+  justify-content: space-around;
 }
 .page-header{
   flex-grow: 1;
@@ -32,6 +31,9 @@ header {
 .menu{
   margin-left: 35px;
 }
+.menu a{
+  text-decoration: none;
+}
 .menu:hover{
   border: 1px solid blueviolet;
   background-color: lightgrey;
@@ -43,9 +45,13 @@ header {
 /*---------------
    first section
 ----------------*/
-.first-sec{
-  display: flex;
+.first-sec {
+  display: grid;
+  grid-template-columns: 30% 30%;
   padding-top: 145px;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 #header-main{
   font-size: 52px;
@@ -73,6 +79,52 @@ header {
 .main-cam{
   width: 40%;
   margin-top: -70px;
+}
+
+
+.influencer{
+  font-size: 52px;
+  white-space: nowrap;
+  position: relative;
+  color: transparent;
+}
+.influencer::before{
+  content: 'Influencer';
+  position: absolute;
+  color: rgb(8, 248, 0);
+  animation: typing 3s ease-in-out infinite;
+}
+@keyframes typing {
+  0%{
+    content: 'I|';
+  }
+  10%{
+    content: "In|";
+  }
+  19%{
+    content: "Inf|";
+  }
+  29%{
+    content: "Infl|";
+  }
+  38%{
+    content: "Influ|";
+  }
+  48%{
+    content: "Influe|";
+  }
+  59%{
+    content: "Influen|";
+  }
+  69%{
+    content: "Influenc|";
+  }
+  85%{
+    content: "Influence|";
+  }
+  100%{
+    content: "Influencer|";
+  } 
 }
 
 /*------------------------
@@ -110,12 +162,11 @@ header {
   font-size: 28px;
   margin-bottom: 30px;
 }
-.pop-collection{
+.pop-collection {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  margin-left: 30px;
-
+  grid-template-columns: repeat(3, 24%);
+  grid-gap: 40px;
+  justify-content: space-evenly;
 }
 .collection{
   border-radius: 5px;
@@ -153,6 +204,7 @@ header {
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: 30px;
+  margin-right: 6%;
   color: rgb(189, 102, 230);
 }
 .ar{
@@ -162,10 +214,12 @@ header {
 /*-------------------- 
       Final Section
 ----------------------*/
-.final-section{
+.final-section {
   margin-top: 100px;
   display: grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns: repeat(4, 20%);
+  justify-items: center;
+  justify-content: space-evenly;
 }
 .contact h3{
   font-size: 24px;
@@ -174,6 +228,9 @@ header {
 .contact>ul>li{
   list-style-type: none;
   color: gray;
+}
+.contact a{
+  text-decoration: none;
 }
 .send{
   margin-top: 10px;
@@ -216,48 +273,66 @@ footer h2{
 }
 
 
+/* media query */
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    margin-top: 35px;
+}
+  .bar{
+    display: block;
+  }
+  .page-header{
+    position: relative;
+    left: 110px;
+    top: -12px;
+    font-size: 16px;
+  }
+  .menu{
+    visibility:hidden;
+  }
+  .fa-shopping-cart{
+    visibility: visible;
+    position: relative;
+    left: -80%;
+  }
+  .menu-container {
+    display: flex;
+    order: 1;
+    flex-wrap: wrap;
+    transform: translateX(135px) translateY(-70px);
+    }
+    .first-sec{
+      display: flex;
+      flex-direction: column;
+      padding-top: 400px;
+    }
+    .first-sec {
+      display: flex;
+      flex-direction: column;
+      padding-top: 500px;
+  }
+  .influencer-intro {
+    margin-right: 0;
+    margin-top: -230px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .main-cam img{
+    Width: 257px;
+    Height: 257px;
+    position: absolute;
+    top: 135px;
+  }
+  .companies {
+    display: flex;
+    margin-top: 140px;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  } */
 
-.influencer{
-  font-size: 52px;
-  white-space: nowrap;
-  position: relative;
-  color: transparent;
-}
-.influncer::before{
-  content: 'Influencer';
-  position: absolute;
-  color: rgb(8, 248, 0);
-  animation: typing 2s ease-in-out infinite;
-}
-@keyframes typing {
-  0%{
-    content: 'I|';
-  }
-  10%{
-    content: "In|";
-  }
-  19%{
-    content: "Inf|";
-  }
-  29%{
-    content: "Infl|";
-  }
-  38%{
-    content: "Influ|";
-  }
-  48%{
-    content: "Influe|";
-  }
-  59%{
-    content: "Influen|";
-  }
-  69%{
-    content: "Influenc|";
-  }
-  85%{
-    content: "Influence|";
-  }
-  100%{
-    content: "Influencer|";
-  } 
 }

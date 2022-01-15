@@ -10,21 +10,22 @@
 </head>
 <body>
   <header>
-    <h2 class="page-header">Influencer Products</h2>
+    <div><h2 class="page-header">Influencer Products</h2></div>
+    <div class="bar"><i class="fas fa-bars"></i></div>
     <div class="menu-container">
-    <p class="menu">Home</p>
-    <p class="menu">Products</p>
-    <p class="menu">Sign Up</p>
-    <p class="menu">Log In</p>
-    <p class="menu"><i class="fas fa-search"></i></p>
-    <p class="menu"><i class="fas fa-shopping-cart"></i></p>
+    <p class="menu"><a href="">Home</a></p>
+    <p class="menu"><a href="">Products</a></p>
+    <p class="menu"><a href="">Sign Up</a></p>
+    <p class="menu"><a href="">Log In</a></p>
+    <p class="menu"><a href=""><i class="fas fa-search"></i></a></p>
+    <p class="menu"><a href=""><i class="fas fa-shopping-cart"></i></a></p>
     </div>
   </header>
   <!-- first section -->
   <section class="first-sec">
     <div class="influencer-intro">
       <h1 id="header-main">
-        Start Your Journey as <br><span class="influncer">Influencer</span>
+        Start Your Journey as <br><span class="influencer">Influencer</span>
       </h1>
       <p class="header-para">This is the journey of my life of being a Movie Maker. By telling and showing stories, it may work as influence.</p>
       <button class="btn-primary">Preebook Now<i class="fas fa-arrow-right"></i></button>
@@ -103,25 +104,25 @@
     <div class="contact">
       <h3>Product Overview</h3>
       <ul>
-        <li>Site Search</li>
-        <li>Browsing/Navigation</li>
-        <li>Recommendations</li>
-        <li>Specification Sheet</li>
-        <li>Pricing</li>
+        <li><a href="">Site Search</a></li>
+        <li><a href="">Browsing/Navigation</a></li>
+        <li><a href="">Recommendations</a></li>
+        <li><a href="">Specification Sheet</a></li>
+        <li><a href="">Pricing</a></li>
       </ul>
     </div>
     <div class="contact">
       <h3>Technology</h3>
       <ul>
-        <li>How it works</li>
+        <li><a href="">How it works</a></li>
       </ul>
     </div>
     <div class="contact">
       <h3>About Us</h3>
       <ul>
-        <li>Customer Stories</li>
-        <li>Partners</li>
-        <li>Careers</li>
+        <li><a href="">Customer Stories</a></li>
+        <li><a href="">Partners</a></li>
+        <li><a href="">Careers</a></li>
       </ul>
     </div>
     <div class="contact">
@@ -141,5 +142,42 @@
     <p class="footer-p">All rights reserved</p>
     <div class="icons"><i class="fab fa-github-square"></i><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i></div>
   </footer>
-</body>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
 </html>
