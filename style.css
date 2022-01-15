@@ -282,11 +282,17 @@ footer h2{
   .bar{
     display: block;
   }
+  .pop-collection {
+    display: grid;
+    grid-template-columns: repeat(1, 76%);
+    grid-gap: 40px;
+    justify-content: center;
+}
   .page-header{
     position: relative;
-    left: 110px;
-    top: -12px;
-    font-size: 16px;
+    left: 189px;
+    top: -27px;
+    font-size: 23px;
   }
   .menu{
     visibility:hidden;
@@ -299,8 +305,10 @@ footer h2{
   .menu-container {
     display: flex;
     order: 1;
-    flex-wrap: wrap;
-    transform: translateX(135px) translateY(-70px);
+    flex-wrap: nowrap;
+    position: relative;
+    right: 41px;
+    align-content: flex-start;
     }
     .first-sec{
       display: flex;
@@ -310,7 +318,7 @@ footer h2{
     .first-sec {
       display: flex;
       flex-direction: column;
-      padding-top: 500px;
+      padding: 514px 102px 100px 102px;
   }
   .influencer-intro {
     margin-right: 0;
@@ -324,14 +332,169 @@ footer h2{
     Width: 257px;
     Height: 257px;
     position: absolute;
-    top: 135px;
+    top: 119px;
+    right: 99px;
   }
+  .company {
+    width: 84px;
+    height: 26px;
+    margin-right: 0px;
+}
   .companies {
     display: flex;
     margin-top: 140px;
-    align-content: center;
+    align-content: space-around;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 18px;
+    justify-content: space-evenly;
+    align-items: center;
   } 
+  .final-section {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(1, 52%);
+    justify-items: stretch;
+    align-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.collection img {
+  width: 246px;
+  height: 200px;
+  margin: 30px;
+}
+#see-more {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 30px;
+  margin-right: 11%;
+  color: rgb(189, 102, 230);
+}
+.responicon{
+  position: relative;
+  left: -11%;
+  bottom: 9px;
+}
+}
+
+
+
+
+/* responsive for tab */
+
+@media (min-width: 767px) and (max-width: 991.98px) { 
+  header {
+    display: flex;
+    margin-top: 35px;
+}
+  .bar{
+    display: block;
+  }
+  .pop-collection {
+    display: grid;
+    grid-template-columns: repeat(2, 36%);
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+  .menu{
+    visibility:hidden;
+  }
+  .fa-shopping-cart{
+    visibility: visible;
+    position: relative;
+    left: -80%;
+  }
+  .menu-container {
+    display: flex;
+    order: 1;
+    flex-wrap: nowrap;
+    position: relative;
+    align-content: flex-start;
+    }
+    .first-sec{
+        display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    .first-sec {
+      display: flex;
+      flex-direction: column;
+      padding: 514px 102px 100px 102px;
+  }
+  .influencer-intro {
+    margin-right: 0;
+    margin-top: -230px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .main-cam img{
+    Width: 257px;
+    Height: 257px;
+    position: absolute;
+    top: 119px;
+  }
+  .company {
+    width: 84px;
+    height: 26px;
+    margin-right: 0px;
+}
+
+.bar {
+  display: none;
+}
+  .companies {
+    display: flex;
+    margin-top: 140px;
+    align-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: space-evenly;
+    align-items: center;
+  } 
+  .final-section {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 13%);
+    align-content: space-evenly;
+    gap: 55px;
+    justify-content: space-around;
+}
+.collection img {
+  width: 246px;
+  height: 200px;
+  margin: 30px;
+}
+
+.menu {
+  visibility: visible;
+  margin-left: 15px;
+}
+#see-more {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 30px;
+  margin-right: 11%;
+  color: rgb(189, 102, 230);
+}
+
+#header-main {
+  font-size: 52px;
+  margin-bottom: 16px;
+  padding-top: 35px;
+  }
 }
